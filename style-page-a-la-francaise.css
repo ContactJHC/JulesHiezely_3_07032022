@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&family=Shrikhand&display=swap');
+
+html {   
+    /* Set border-box as the global default */
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    /* Allow each element to override */
+    box-sizing: inherit;
+  }
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* 
+$primary-color: #9356DC
+$secondary-color: #FF79DA
+$tertiary-color: #99E2D0
+convention d'écriture : english-lang-naming 
+/!\ penser à placer du
+class="bolder-roboto" aprrès importation 3è police
+*/
+
+/* --- code pour la page d'accueil --- */
+
+body {
+    width: 100%;
+    margin: auto;
+}
+
+.logo-title-font {
+  font-family: 'Shrikhand', cursive;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 2.0rem;
+  line-height: 0;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+header div i {
+    font-size: 30px;
+    margin-left: 15px;
+}
+
+.cheat {
+    color: white;
+}
+
+header > div + div {
+  width: 100%;
+  margin: auto;
+}
+
+header div img {
+  object-fit: cover;
+  width: 100%;
+}
+
+h2 {
+  font-family: 'Shrikhand', cursive;
+  font-size: 2rem;
+  padding-left: 10px;
+}
+
+#h2-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 2.5%;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background-color: #f6f6f6;
+}
+
+#h2-header h2 {
+  line-height: 30px;
+}
+
+#h2-header i {
+  padding-right: 30px;
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+.bloc-1title3choices {
+  background-color: #f6f6f6;
+  padding-bottom: 15px;
+}
+
+.bloc-1title3choices h3 {
+  margin: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-left: 2.5%;
+  padding-left: 10px;
+}
+
+.bottom-line {
+  padding-bottom: 3px;
+  border-bottom: solid 3px grey;
+}
+
+.blocky {
+  vertical-align: middle;
+  max-width: 95%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  background-color: white;
+  margin-bottom: 15px;
+  box-shadow: 0px 8px 24px rgb(33,74,115, 0.22);
+}
+
+.plate-description {
+  line-height: 1rem;
+  padding-left: 10px;
+}
+
+.price {
+  align-self: flex-end;
+  font-weight: 900;
+  padding-right: 15px;
+}
+
+strong { 
+  font-size: 1.25rem;
+}
+
+#button-div{
+  width: 100%;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 60px;
+  background-color: #f6f6f6;
+}
+
+button {
+  padding: 1rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  background-color: #FF79DA;
+  color: white;
+  font-weight: 1000;
+  border-radius: 100px;
+  border: none;
+  box-shadow: 0px 2px 10px 2px #f6f6f6;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.linear-gradient {
+  background: linear-gradient(#FF79DA, #9356DC);
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(29, 49, 49);
+  color: white;
+  padding-left: 15px;
+}
+
+ul {
+  padding-left:0;
+}
+
+li {
+  list-style:none;
+}
+
+footer p {
+  font-family: Shrikhand;
+  line-height: 0.01rem;
+}
+
+footer i {
+  width: 25px;
+  font-size: 0.7rem;
+}
+
+footer div {
+  margin-top: 20px;
+}
