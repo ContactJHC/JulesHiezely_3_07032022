@@ -37,12 +37,21 @@ body {
   font-size: 2.0rem;
   line-height: 0;
 }
+header {
+  position: block;
+}
 
-header div {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
+#header__header {
+  position: relative;
+}
+
+#header__header a {
+  position: absolute;
+  bottom: -1rem;
+}
+
+#header__header div {
+  text-align: center;
 }
 
 header a {
@@ -55,16 +64,18 @@ header i {
     margin-left: 15px;
 }
 
-.cheat {
-    color: white;
+#section-main {
+  background-color: #f6f6f6;
 }
 
-header > div + div {
+#section-main__div-image {
+  position: relative;
   width: 100%;
   margin: auto;
+  z-index: 2; 
 }
 
-header div img {
+section div img {
   object-fit: cover;
   width: 100%;
 }
@@ -76,17 +87,26 @@ h2 {
 }
 
 #h2-header {
-  display: flex;
+  position: relative;
   align-items: center;
   justify-content: space-between;
   padding-left: 2.5%;
+  margin-top: -30px;
+  background-color: #f6f6f6;
+  z-index: 3;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
-  background-color: #f6f6f6;
+  padding-top: 1px;
 }
 
 #h2-header h2 {
   line-height: 30px;
+}
+
+.fa-heart {
+  position: absolute;
+  right: 0px;
+  top: 23px;
 }
 
 #h2-header i {
@@ -96,8 +116,8 @@ h2 {
 }
 
 .bloc-1title3choices {
-  background-color: #f6f6f6;
   padding-bottom: 15px;
+  position: relative;
 }
 
 .bloc-1title3choices h3 {
@@ -114,26 +134,63 @@ h2 {
 }
 
 .blocky {
-  vertical-align: middle;
+  /* display: flex; */
+  justify-content: space-between;
   max-width: 95%;
   margin: auto;
-  display: flex;
-  justify-content: space-between;
   border-radius: 10px;
   background-color: white;
   margin-bottom: 15px;
   box-shadow: 0px 8px 24px rgb(33,74,115, 0.22);
+  
 }
 
 .plate-description {
   line-height: 1rem;
   padding-left: 10px;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  overflow: hidden;
 }
 
 .price {
-  align-self: flex-end;
+  bottom: 0.15rem;
+  right: 0px;
   font-weight: 900;
   padding-right: 15px;
+  align-self: flex-end;
+}
+
+.blocky :hover {
+  cursor: pointer;
+}
+
+.blocky :hover > .blocky__transition {
+  width: 0%;
+}
+
+.blocky :hover > .blocky__transition__icon{
+  transform: rotate(-360deg) scale(0);
+}
+
+.blocky__transition {
+  height: auto;
+  background-color: #99E2D0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 20%;
+  transition: width 500ms ease-in-out;
+}
+
+.blocky__transition__icon {
+  /* transform: rotate(0deg), scaleX(0); */
+  /* transform: scaleX(1); */
+  transform: rotate(0deg);
+  transition: transform 500ms ease-in-out;
+  width: 20%;
 }
 
 strong { 
@@ -148,7 +205,6 @@ strong {
   align-items: center;
   padding-top: 30px;
   padding-bottom: 60px;
-  background-color: #f6f6f6;
 }
 
 button {

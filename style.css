@@ -138,6 +138,11 @@ main section + section {
   font-size: 1.2rem;
   display: none;
   padding-right: 10px;
+  
+}
+
+.reso-bug {
+  margin-left: -10px;
 }
 
 #restau_section {
@@ -148,9 +153,9 @@ main section + section {
 
 .float {
   position: relative;
-  right: 10px;
-  width: 25px;
+  width: 26px;
   height: 25px;
+  margin-left: -13px;
   background-color: #9356DC;
   color: white;
   border-radius: 30px;
@@ -158,6 +163,22 @@ main section + section {
   text-align: center;
   padding-top: 3px;
   font-weight: bolder;
+}
+
+.svg {
+  position: relative;
+  right: 3px;
+  height: 25px;
+  margin-right: 25px;
+  margin-bottom: -5px;
+}
+
+.tel {
+  position: relative;
+  top: 11px;
+  right: 10px;
+  height: 35px;
+  margin-right: 25px;
 }
 
 #restau_section h2 {
@@ -201,10 +222,14 @@ main section + section {
   border-top-right-radius: 10px;
 }
 
+.card-menu-p1__div_image{
+  position: relative;
+}
+
 .floaty {
   position: absolute;
-  bottom: 170px;
-  left: 270px;
+  right: 25px;
+  top: 25px;
   max-width: fit-content;
   background-color: #99E2D0;
   border-radius: 5px;
@@ -212,7 +237,11 @@ main section + section {
   padding-left: 10px;
   padding-right: 10px;
   font-weight: bolder;
-  color: darkgreen;
+  color: #109171;
+}
+
+.pas-afficher {
+  display: none;
 }
 
 .shadow {
