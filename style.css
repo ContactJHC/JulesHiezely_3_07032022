@@ -61,6 +61,22 @@ body {
   animation: spinnerInt 1.5s linear infinite;
 }
 
+.barre-toi-spinner {
+  position: absolute;
+  right: 100px;
+  top: 100px;
+  padding: 20px;
+  border: 2px orange solid;
+  background-color: yellow;
+  animation: spinnerMan 6s
+}
+
+@keyframes spinnerMan {
+  0% {opacity: 0}
+  90% {opacity: 0}
+  100% {opacity: 1}
+}
+
 @keyframes spinnerExt {
   0% {transform: rotate(0deg); width: 100%; height: 100%}
   50% {transform: rotate(-180deg); width: 50%; height: 50%}
