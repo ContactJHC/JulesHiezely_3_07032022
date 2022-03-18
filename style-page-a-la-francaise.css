@@ -23,11 +23,9 @@ convention d'écriture : english-lang-naming
 class="bolder-roboto" aprrès importation 3è police
 */
 
-/* --- code pour la page d'accueil --- */
-
 body {
-    width: 100%;
-    margin: auto;
+  width: 100%;
+  margin: auto;
 }
 
 .logo-title-font {
@@ -139,9 +137,56 @@ h2 {
   border-radius: 10px;
   background-color: white;
   margin-bottom: 15px;
-  box-shadow: 0px 8px 24px rgb(33,74,115, 0.22);
+  box-shadow: 0px 8px 24px rgb(33,74,115, 0.25);
   
-  
+}
+
+.entrees {
+  animation: fadein 5s;
+  -moz-animation: fadein 5s; /* Firefox */
+  -webkit-animation: fadein 5s; /* Safari et Chrome */
+
+}
+
+.plats {
+  animation: fadein 8s;
+  -moz-animation: fadein 8s; /* Firefox */
+  -webkit-animation: fadein 8s; /* Safari et Chrome */
+
+}
+
+.desserts {
+  animation: fadein 11s;
+  -moz-animation: fadein 11s; /* Firefox */
+  -webkit-animation: fadein 11s; /* Safari et Chrome */
+
+}
+
+
+@keyframes fadein {
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+  }
+}
+
+@-moz-keyframes fadein { 
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+  }
+}
+@-webkit-keyframes fadein { 
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+  }
 }
 
 .plate-description {
