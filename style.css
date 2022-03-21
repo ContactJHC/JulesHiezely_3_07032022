@@ -91,10 +91,10 @@ body {
 
 #container {
   height: 100px;
-  animation: fadein 5s;
+  /* animation: fadein 5s;
   -moz-animation: fadein 5s; /* Firefox */
   -webkit-animation: fadein 5s; /* Safari et Chrome */
-}
+} */
 
 @keyframes fadein {
   0% {opacity: 0}
@@ -374,4 +374,62 @@ footer div {
   margin-top: 20px;
 }
 
-/* shift+f6 pour mesurer les pixels */
+.contact {
+  text-decoration: none;
+  color: white;
+}
+
+/* Style Tablette */
+
+@media (min-width: 768px) {
+
+  #container {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  #section-position {
+    width: 100%;
+    margin: auto;
+  }
+
+  #section-fonctionnement {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+
+  #restau_section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #restau_section h2 {
+    align-self: flex-start;
+  }
+
+  .card-menu-p1 {
+    width: 40%;
+  }
+
+  .card-notice-P1 {
+    max-width: 60%;
+    min-width: fit-content;
+    margin: ;
+  }
+
+
+}
+
+/* Style Desktop */
+
+@media (min-width: 992px) {
+
+  #container {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+
+
+
+}
