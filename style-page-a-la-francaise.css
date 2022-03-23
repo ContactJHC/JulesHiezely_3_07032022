@@ -3,6 +3,7 @@
 html {   
     /* Set border-box as the global default */
     box-sizing: border-box;
+    scroll-behavior: smooth;
   }
   
   *, *:before, *:after {
@@ -66,13 +67,15 @@ header i {
 #section-main__div-image {
   position: relative;
   width: 100%;
-  margin: auto;
-  z-index: 2; 
+  height: 400px;
+  z-index: 0;
 }
 
-section div img {
-  object-fit: cover;
+#section-main__div-image img {
   width: 100%;
+  height: 400px;
+  object-fit: cover;
+  
   /* position: 0px -50px 0px 50px; */
 }
 
@@ -103,6 +106,21 @@ h2 {
   position: absolute;
   right: 0px;
   top: 23px;
+}
+
+.fa-heart-plein {
+  display: none;
+  color: red;
+}
+
+.heart:hover .fa-heart-plein {
+  display: block;
+
+}
+
+.heart:hover .fa-heart-vide {
+  display: none;
+
 }
 
 #h2-header i {
@@ -137,56 +155,79 @@ h2 {
   overflow: hidden;
   border-radius: 10px;
   background-color: white;
+  margin-top: 5px;
   margin-bottom: 15px;
   box-shadow: 0px 8px 24px rgb(33,74,115, 0.25);
   
 }
 
 .entrees {
-  animation: fadein 5s;
-  -moz-animation: fadein 5s; /* Firefox */
-  -webkit-animation: fadein 5s; /* Safari et Chrome */
-
+  animation: fadeinentrees 2s;
+  
 }
 
 .plats {
-  animation: fadein 8s;
-  -moz-animation: fadein 8s; /* Firefox */
-  -webkit-animation: fadein 8s; /* Safari et Chrome */
-
+  animation: fadeinplats 2s ;
+  
 }
 
 .desserts {
-  animation: fadein 11s;
-  -moz-animation: fadein 11s; /* Firefox */
-  -webkit-animation: fadein 11s; /* Safari et Chrome */
+  animation: fadeindesserts 2s ;
 
 }
 
 
-@keyframes fadein {
-  from {
+@keyframes fadeinentrees {
+  0% {
       opacity:0;
+      margin-top: 5px;
+
   }
-  to {
+  100% {
       opacity:1;
+      margin-top: 0px;
   }
 }
 
-@-moz-keyframes fadein { 
-  from {
+@keyframes fadeinplats {
+  0% {
       opacity:0;
+      margin-top: 5px;
+
   }
-  to {
+
+  50% {
+    opacity:0;
+    margin-top: 5px;
+  }
+
+  100% {
       opacity:1;
+      margin-top: 0px;
   }
 }
-@-webkit-keyframes fadein { 
-  from {
+
+@keyframes fadeindesserts {
+  0% {
       opacity:0;
+      margin-top: 5px;
+
   }
-  to {
+
+  50% {
+    opacity:0;
+    margin-top: 5px;
+
+  }
+
+  75% {
+    opacity:0;
+    margin-top: 5px;
+  }
+
+  100% {
       opacity:1;
+      margin-top: 0px;
   }
 }
 
@@ -199,6 +240,13 @@ h2 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   overflow: hidden;
+}
+
+.plate-description p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
 }
 
 .price {
@@ -320,16 +368,16 @@ footer div {
 @media (min-width: 768px) {
 
   #header__header i {
-    display: none;
+    font-size: 3rem;
   }
 
   #header__header p {
     font-size: 4rem;
   }
 
-  #section-main {
-    margin-right: 15%;
-    margin-left: 15%;
+  main, footer {
+    margin-right: 5%;
+    margin-left: 5%;
   }
 
   #section-main__div-image {
@@ -352,6 +400,12 @@ footer div {
   .bloc-1title3choices__choices {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 20px;
+  }
+
+  .entreesLaNoteEnchantee .blocky {
+    width: 40%;
   }
 
   .blocky p {
@@ -366,5 +420,23 @@ footer div {
 
 }
 
+/* Style desktop*/
+@media (min-width: 992px) {
+  main, footer {
+    margin-right: 3%;
+    margin-left: 3%;
+  }
+}
 
+/* mettre l'image entre entrée et plats */
+
+/* #section-main {
+  display: flex;
+  flex-direction: column;
+
+}
+
+#section-main__div-image {
+  order: 1;
+} */
 

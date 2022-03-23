@@ -3,6 +3,7 @@
 html {   
     /* Set border-box as the global default */
     box-sizing: border-box;
+    scroll-behavior: smooth;
   }
   
   *, *:before, *:after {
@@ -18,16 +19,37 @@ html {
 $primary-color: #9356DC
 $secondary-color: #FF79DA
 $tertiary-color: #99E2D0
-convention d'écriture : english-lang-naming 
-/!\ penser à placer du
-class="bolder-roboto" aprrès importation 3è police
-*/
-
-/* --- code pour la page d'accueil --- */
+ --- code pour la page d'accueil --- */
 
 body {
   width: 100%;
   margin: auto;
+}
+
+.overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  visibility: collapse;
+  background-color: rgba(25,25,25,0.36);
+  z-index: 6;
+  animation: spinnerMan 2s ease-out;
+}
+/* 
+@keyframes spinnerMan {
+  0% {display: block;}
+  99% {display: block;}
+  100% {display: none;}
+} */
+
+
+@keyframes spinnerMan {
+  0% {visibility: visible}
+  99% {visibility: visible}
+  100% {visibility: collapse}
+  
 }
 
 .loading {
@@ -39,7 +61,6 @@ body {
   position: relative;
   padding-top: 200px;
   margin: auto;
-  animation: ciaoSpinner 5s;
 }
 
 .loading-spinner {
@@ -61,22 +82,6 @@ body {
   animation: spinnerInt 1.5s linear infinite;
 }
 
-.barre-toi-spinner {
-  position: absolute;
-  right: 100px;
-  top: 100px;
-  padding: 20px;
-  border: 2px orange solid;
-  background-color: yellow;
-  animation: spinnerMan 6s
-}
-
-@keyframes spinnerMan {
-  0% {opacity: 0}
-  90% {opacity: 0}
-  100% {opacity: 1}
-}
-
 @keyframes spinnerExt {
   0% {transform: rotate(0deg); width: 100%; height: 100%}
   50% {transform: rotate(-180deg); width: 50%; height: 50%}
@@ -91,14 +96,12 @@ body {
 
 #container {
   height: 100px;
-  /* animation: fadein 5s;
-  -moz-animation: fadein 5s; /* Firefox */
-  -webkit-animation: fadein 5s; /* Safari et Chrome */
-} */
+  animation: fadein 2.5s;
+}
 
 @keyframes fadein {
   0% {opacity: 0}
-  60% {opacity: 0}
+  90% {opacity: 0}
   100% {opacity: 1}
 }
 
@@ -137,7 +140,7 @@ body {
 #section-position {
   display: inline-block;
   text-align: center;
-  background-color: #f6f6f6;
+  background-color: hsl(0, 0%, 96%);
 }
 
 #position {
@@ -172,6 +175,11 @@ h1 {
 section div + div p {
   font-size: 1.2rem;
 
+}
+
+button:active {
+  background: linear-gradient(hsl(317, 100%, 84%), hsl(267, 66%, 70%));
+  box-shadow: 6px 6px 8px 2px grey;
 }
 
 .button {
@@ -278,6 +286,7 @@ main section + section {
 }
 
 .card-menu-p1 {
+  display: block;
   border-radius: 10px ;
   width: 95%;
   margin: auto;
@@ -285,12 +294,6 @@ main section + section {
   background-color: white;
   color: black;
   text-decoration: none;
-}
-
-.card-menu-p1:first-child {
-  width: 100%;
-  margin: auto;
-  border-radius: 10px;
 }
 
 .description-card-menu-p1 {
@@ -304,6 +307,11 @@ main section + section {
 
 .description-card-menu-p1 i {
   font-size: 2rem;
+}
+ 
+
+.description-card-menu-p1 i {
+  position: relative;
 }
 
 .card-menu-p1 img {
@@ -391,6 +399,8 @@ footer div {
   #section-position {
     width: 100%;
     margin: auto;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
   }
 
   #section-fonctionnement {
@@ -399,13 +409,17 @@ footer div {
   }
 
   #restau_section {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    padding-bottom: 30px;
+    border-top-left-radius: 20px; 
+    border-top-right-radius: 20px;   
   }
 
-  #restau_section h2 {
-    align-self: flex-start;
+  #restau_section__flexbox--768px {
+    display: flex;
+    row-gap: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .card-menu-p1 {
@@ -415,7 +429,6 @@ footer div {
   .card-notice-P1 {
     max-width: 60%;
     min-width: fit-content;
-    margin: ;
   }
 
 
@@ -426,10 +439,18 @@ footer div {
 @media (min-width: 992px) {
 
   #container {
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 3%;
+    margin-right: 3%;
   }
 
+  #restau_section__flexbox--768px {
+    row-gap: 60px;
+
+  }
+
+  #restau_section {
+    padding-bottom: 60px;
+  }
 
 
 }
