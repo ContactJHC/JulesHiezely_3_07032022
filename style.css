@@ -138,6 +138,7 @@ body {
 }
 
 #section-position {
+  width: 100%;
   display: inline-block;
   text-align: center;
   background-color: hsl(0, 0%, 96%);
@@ -305,13 +306,25 @@ main section + section {
   background-color: white; 
 }
 
-.description-card-menu-p1 i {
-  font-size: 2rem;
-}
- 
-
-.description-card-menu-p1 i {
+.hearty {
+  width: 2rem;
   position: relative;
+}
+
+.svgheart {
+  position: absolute;
+  top: -10px;
+  width: 2rem;
+  fill-opacity: 1;
+}
+
+.hearty:hover .hearthover {
+  opacity: 1;
+}
+
+.hearthover {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .card-menu-p1 img {

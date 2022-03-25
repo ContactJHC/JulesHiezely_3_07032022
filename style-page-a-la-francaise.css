@@ -102,26 +102,28 @@ h2 {
   line-height: 30px;
 }
 
-.fa-heart {
+.hearty {
+  width: 2rem;
+}
+
+.svgheart {
   position: absolute;
-  right: 0px;
+  right: 30px;
   top: 23px;
+  width: 2rem;
+  fill-opacity: 1;
 }
 
-.fa-heart-plein {
-  display: none;
-  color: red;
+.hearty:hover .hearthover {
+  opacity: 1;
 }
 
-.heart:hover .fa-heart-plein {
-  display: block;
-
+.hearthover {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
-.heart:hover .fa-heart-vide {
-  display: none;
 
-}
 
 #h2-header i {
   padding-right: 30px;
