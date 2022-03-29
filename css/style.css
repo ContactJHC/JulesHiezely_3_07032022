@@ -309,6 +309,7 @@ main section + section {
 .hearty {
   width: 2rem;
   position: relative;
+  cursor: pointer;
 }
 
 .svgheart {
@@ -316,15 +317,22 @@ main section + section {
   top: -10px;
   width: 2rem;
   fill-opacity: 1;
+  cursor: pointer;
 }
 
 .hearty:hover .hearthover {
   opacity: 1;
+  cursor: pointer;
 }
 
 .hearthover {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.heartnohover {
+  cursor: pointer;
 }
 
 .card-menu-p1 img {
@@ -522,6 +530,7 @@ footer div {
 #button-div:active button:hover {
   background: linear-gradient(hsl(317, 100%, 84%), hsl(267, 66%, 70%));
   box-shadow: 6px 6px 8px 2px grey;
+  cursor: pointer;
 }
 
 #button-div{

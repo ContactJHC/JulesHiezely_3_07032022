@@ -104,6 +104,7 @@ h2 {
 
 .hearty {
   width: 2rem;
+  cursor: pointer;
 }
 
 .svgheart {
@@ -112,17 +113,23 @@ h2 {
   top: 23px;
   width: 2rem;
   fill-opacity: 1;
+  cursor: pointer;
 }
 
 .hearty:hover .hearthover {
   opacity: 1;
+  cursor: pointer;
 }
 
 .hearthover {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
+  cursor: pointer;
 }
 
+.heartnohover {
+  cursor: pointer;
+}
 
 
 #h2-header i {
