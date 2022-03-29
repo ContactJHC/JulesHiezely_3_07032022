@@ -182,12 +182,13 @@ h2 {
 @keyframes fadeinentrees {
   0% {
       opacity:0;
-      margin-top: 5px;
+      padding-top: 5px;
 
   }
+  
   100% {
       opacity:1;
-      margin-top: 0px;
+      padding-top: 0px;
   }
 }
 
@@ -405,6 +406,10 @@ footer div {
     flex-wrap: wrap;
     row-gap: 20px;
   }
+
+  .bloc-1title3choices__h3 {
+    text-align: center;
+  } 
 
   .entreesLaNoteEnchantee .blocky {
     width: 40%;

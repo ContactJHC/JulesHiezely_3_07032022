@@ -1,0 +1,35 @@
+
+#header__header {
+    position: relative;
+  }
+  
+  #header__header a {
+    position: absolute;
+    bottom: -1rem;
+  }
+  
+  #header__header div {
+    text-align: center;
+  }
+  
+  header a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  header i {
+      font-size: 30px;
+      margin-left: 15px;
+  }
+
+  .logo-title-font {
+    font-family: 'Shrikhand', cursive;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 3.0rem;
+    line-height: 0;
+  }
+  
+  .logo-justify {
+    text-align: center;
+  }
