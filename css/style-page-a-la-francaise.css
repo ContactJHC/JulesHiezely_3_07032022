@@ -99,44 +99,56 @@ h2 {
 }
 
 #h2-header h2 {
+  font-size: 1.5rem;
   line-height: 30px;
 }
 
 .hearty {
-  width: 2rem;
-  cursor: pointer;
-}
-
-.svgheart {
   position: absolute;
-  right: 30px;
-  top: 23px;
-  width: 2rem;
-  fill-opacity: 1;
+  right: 20px;
+  top: 1.5rem;
   cursor: pointer;
 }
 
-.hearty:hover .hearthover {
+.far {
+  display: block;
+  position: relative;
+  font-size: 25px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.fascicule {
+  position: absolute;
+  top: 21.25px;
+  left: 12.5px;
+  font-size: 0px;
+  transition: top 0.5s, font-size 0.5s, left 0.5s;
+  background: linear-gradient(to bottom, #9356DC 0%,#FF79DA 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hearty:active .fascicule {
+  top: 2px;
+  font-size: 21px;
+  left: 2px;
+}
+
+/*  CODE POUR CHANGEMENT OPACITE DE SVG/INACTIF SUR TAB ET MOBILE
+.fa_heart {
+  position: relative;
+  font-size: 2rem;
+}
+
+.hearty:active .fas {
   opacity: 1;
   cursor: pointer;
 }
 
-.hearthover {
+.fas {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
   cursor: pointer;
-}
-
-.heartnohover {
-  cursor: pointer;
-}
-
-
-#h2-header i {
-  padding-right: 30px;
-  font-size: 2rem;
-  font-weight: 100;
-}
+} */
 
 .bloc-1title3choices {
   padding-bottom: 15px;
@@ -267,16 +279,16 @@ h2 {
   align-self: flex-end;
 }
 
-.blocky:hover {
+.blocky:active {
   cursor: pointer;
 }
 
 
-.blocky:hover .blocky__transition {
+.blocky:active .blocky__transition {
   margin-right: 0px;
 }
 
-.blocky:hover .blocky__transition__icon{
+.blocky:active .blocky__transition__icon{
   transform: rotate(-360deg);
 }
 
@@ -290,13 +302,13 @@ h2 {
   border-bottom-right-radius: 10px;
   width: 100px;
   margin-right: -100px;
-  transition: margin-right 500ms ease-in-out;
+  transition: margin-right 400ms ease-in-out;
 }
 
 .blocky__transition__icon {
   fill: white;
   transform: rotate(0deg);
-  transition: transform 500ms ease-in-out;
+  transition: transform 400ms ease-in-out;
   width: 35%;
 }
 
@@ -304,7 +316,7 @@ strong {
   font-size: 1.25rem;
 }
 
-#button-div:active button:hover {
+#button-div:active button:active {
   background: linear-gradient(hsl(317, 100%, 84%), hsl(267, 66%, 70%));
   box-shadow: 6px 6px 8px 2px grey;
 }
@@ -401,6 +413,39 @@ footer div {
 
   #h2-header {
     text-align: center;
+    
+  }
+
+  #h2-header h2 {
+    font-size: 2rem;
+  }
+
+  .hearty {
+    right: 60px;
+    top: 0.7rem;
+  }
+
+  .far {
+    display: block;
+    position: relative;
+    font-size: 50px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .fascicule {
+    position: absolute;
+    top: 42.5px;
+    left: 25px;
+    font-size: 0px;
+    transition: top 0.5s, font-size 0.5s, left 0.5s;
+    background: linear-gradient(to bottom, #9356DC 0%,#FF79DA 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .hearty:active .fascicule {
+    top: 4px;
+    font-size: 42px;
+    left: 4px;
   }
 
   .price {
@@ -440,7 +485,18 @@ footer div {
     margin-right: 3%;
     margin-left: 3%;
   }
+
+  #h2-header h2 {
+    font-size: 2.5rem;
+  }
+
+  .hearty {
+    top: 1.2rem;
+  }
+
 }
+
+
 
 /* mettre l'image entre entrée et plats */
 
@@ -453,4 +509,6 @@ footer div {
 #section-main__div-image {
   order: 1;
 } */
+
+
 

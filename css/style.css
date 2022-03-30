@@ -222,29 +222,50 @@ main section + section {
 
 .card-notice-P1 p, .card-notice-P1 i {
   display: inline-block;  
-  margin-right: 20px;
 }
 
 .card-notice-P1 i {
   color: black;
   font-size: 1.2rem;
-  padding-right: 10px;
+  padding-right: 6.5px;
 }
 
 .card-notice-P1 p {
   font-weight: 1000;
 }
 
-.notice-text{
-  font-size: 1.2rem;
-  display: none;
-  padding-right: 10px;
+.tel {
+  margin-right: 3px;
+  position: relative;
+  top: 11px;
+  height: 35px;
+  left: 7px;
+  margin-left: -9px;
   
+}
+.fa-list{
+  position: relative;
+  left: 7px;
 }
 
 .reso-bug {
-  margin-left: -10px;
+  margin-left: -3px;
 }
+
+.svg {
+  margin-right: 3px;
+  position: relative;
+  height: 25px;
+  left: 7px;
+  margin-bottom: -7px;
+}
+
+.notice-text{
+  font-size: 1.2rem;
+  padding-left: 4px;
+  
+}
+
 
 #restau_section {
   display: flex;
@@ -268,18 +289,9 @@ main section + section {
 
 .svg {
   position: relative;
-  right: 3px;
   height: 25px;
-  margin-right: 25px;
+  margin-left: -3px;
   margin-bottom: -5px;
-}
-
-.tel {
-  position: relative;
-  top: 11px;
-  right: 10px;
-  height: 35px;
-  margin-right: 25px;
 }
 
 #restau_section h2 {
@@ -305,34 +317,41 @@ main section + section {
   margin-left: 10px;
   background-color: white; 
 }
-
+/* 
 .hearty {
-  width: 2rem;
+  width: 32px;
+  height: 32px;
   position: relative;
   cursor: pointer;
+} */
+
+.hearty {
+  position: relative;
+  right: 20px;
+  cursor: pointer;
 }
 
-.svgheart {
+.far {
+  display: block;
+  position: relative;
+  font-size: 33.33px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.fascicule {
   position: absolute;
-  top: -10px;
-  width: 2rem;
-  fill-opacity: 1;
-  cursor: pointer;
+  top: 28.3px;
+  left: 16.665px;
+  font-size: 0px;
+  transition: top 0.5s, font-size 0.5s, left 0.5s;
+  background: linear-gradient(to bottom, #9356DC 0%,#FF79DA 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-
-.hearty:hover .hearthover {
-  opacity: 1;
-  cursor: pointer;
-}
-
-.hearthover {
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-  cursor: pointer;
-}
-
-.heartnohover {
-  cursor: pointer;
+.hearty:active .fascicule {
+  top: 2px;
+  font-size: 30px;
+  left: 1.985px;
 }
 
 .card-menu-p1 img {
@@ -429,6 +448,13 @@ footer div {
     margin-right: 10%;
   }
 
+  .notice-text{
+    font-size: 1.2rem;
+    padding-left: 6px;
+    
+  }
+  
+
   #section-fonctionnement h2 {
     text-align: center;
   }
@@ -480,6 +506,12 @@ footer div {
     margin-bottom: 15px;
   }
 
+  .notice-text{
+    font-size: 1.2rem;
+    padding-left: 8px;
+    
+  }
+  
   #restau_section__flexbox--768px {
     row-gap: 60px;
 
@@ -489,6 +521,36 @@ footer div {
     padding-bottom: 60px;
   }
 
+  /* CODE POUR OPACITE DE .SVG NON-OPERATIONNEL SUR TAB. ET TEL.
+  .hearty {
+    width: 32px;
+    height: 32px;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .svgheart {
+    position: absolute;
+    top: -10px;
+    width: 2rem;
+    fill-opacity: 1;
+    cursor: pointer;
+  }
+  
+  .hearty:hover .hearthover {
+    opacity: 1;
+    cursor: pointer;
+  }
+  
+  .hearthover {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .heartnohover {
+    cursor: pointer;
+  } */
 
 }
 
@@ -558,3 +620,4 @@ button {
   font-size: 1.2rem;
   margin-bottom: 30px;
 }
+
