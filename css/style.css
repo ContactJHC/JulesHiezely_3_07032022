@@ -348,7 +348,7 @@ main section + section {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.hearty:active .fascicule {
+.hearty:hover .fascicule {
   top: 2px;
   font-size: 30px;
   left: 1.985px;

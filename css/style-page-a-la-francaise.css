@@ -127,7 +127,7 @@ h2 {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.hearty:active .fascicule {
+.hearty:hover .fascicule {
   top: 2px;
   font-size: 21px;
   left: 2px;
@@ -279,16 +279,16 @@ h2 {
   align-self: flex-end;
 }
 
-.blocky:active {
+.blocky:hover {
   cursor: pointer;
 }
 
 
-.blocky:active .blocky__transition {
+.blocky:hover .blocky__transition {
   margin-right: 0px;
 }
 
-.blocky:active .blocky__transition__icon{
+.blocky:hover .blocky__transition__icon{
   transform: rotate(-360deg);
 }
 
@@ -442,7 +442,7 @@ footer div {
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  .hearty:active .fascicule {
+  .hearty:hover .fascicule {
     top: 4px;
     font-size: 42px;
     left: 4px;
