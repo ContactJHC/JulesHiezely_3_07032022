@@ -126,6 +126,7 @@ h2 {
   background: linear-gradient(to bottom, #9356DC 0%,#FF79DA 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
 .hearty:hover .fascicule {
   top: 2px;
@@ -441,6 +442,7 @@ footer div {
     background: linear-gradient(to bottom, #9356DC 0%,#FF79DA 100%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
   }
   .hearty:hover .fascicule {
     top: 4px;
