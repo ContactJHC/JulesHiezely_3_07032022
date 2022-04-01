@@ -317,7 +317,7 @@ strong {
   font-size: 1.25rem;
 }
 
-#button-div:active button:active {
+#button-div:hover button:hover {
   background: linear-gradient(hsl(317, 100%, 84%), hsl(267, 66%, 70%));
   box-shadow: 6px 6px 8px 2px grey;
 }
@@ -465,8 +465,8 @@ footer div {
     text-align: center;
   } 
 
-  .entreesLaNoteEnchantee .blocky {
-    width: 40%;
+  .entreesLaNoteEnchantee {
+    display: none;
   }
 
   .blocky p {
